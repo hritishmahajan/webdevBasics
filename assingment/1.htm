@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accordion</title>
+  <style>
+
+    .accordion {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .accordion-item {
+      background-color: #eee;
+    }
+
+    .accordion-header {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 3px solid red;
+    }
+
+    .accordion-header::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-weight: bold;
+      color: cyan;
+    }
+
+    .accordion-header.active::after {
+      content: '-';
+    }
+
+    .accordion-body {
+      display: none;
+      color: blue;
+      padding: 15px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="toggleAccordion(this)">Section 1</div>
+    <div class="accordion-body">Para1 is displayed</div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="toggleAccordion(this)">Section 2</div>
+    <div class="accordion-body">Para2 is displayed</div>
+  </div>
+</div>
+
+<script>
+  function toggleAccordion(element) {
+    const body = element.nextElementSibling;
+    const isActive = element.classList.contains('active');
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.classList.remove('active');
+      const next = header.nextElementSibling;
+      if (next && next.classList.contains('accordion-body')) {
+        next.style.display = 'none';
+      }
+    });
+
+    if (!isActive) {
+      element.classList.add('active');
+      body.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>

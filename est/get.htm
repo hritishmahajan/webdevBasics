@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+<!-- <section>
+	<div>HTML</div>
+	<div>CSS</div>
+	<div>JavaScript</div>
+</section> -->
+
+
+<script type="text/javascript">
+var section = document.createElement('section');
+console.log(section);	
+var div1 = document.createElement('div');
+// console.log(div1);	
+var div1Txt = document.createTextNode('HTML');
+    div1.appendChild(div1Txt);
+    section.appendChild(div1);
+    console.log(section);
+
+  var div2 = document.createElement('div');
+var div2Txt = document.createTextNode('CSS');
+    div2.appendChild(div2Txt);
+    section.appendChild(div2);  
+    document.body.appendChild(section);
+
+</script>
+
+ 
+</body>
+</html>

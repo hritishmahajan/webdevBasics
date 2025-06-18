@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TimeOut in JavaScript</title>
+</head>
+<body>
+<p> Click on button to stop the message</p>
+<input type = "button"  value="touch Me" onclick="stopmsg()">
+
+<script>
+
+let x = setTimeout('msg()',3000);	 
+	
+function msg()
+{
+	alert("Virgin! \nYou didn't even touch me");
+}
+
+	function stopmsg()
+	{
+		clearTimeout(x);
+		alert("You touched me!");
+	} 
+
+
+</script>
+
+
+
+
+

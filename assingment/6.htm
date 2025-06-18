@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fullscreen Carousel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+    }
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+      height: 100vh;
+    }
+    .carousel-item img {
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
+      margin: auto;
+      display: block;
+      background-color: #000; 
+    }
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    .carousel-indicators li {
+      background-color: #fff;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="DSC_1174.JPG" class="d-block" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block text-light">
+          <h5>Sonu Nigam Live</h5>
+          <p>Clicked by Rohit Arora at AIIMS, Rishikesh</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="f1162048.jpg" class="d-block" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block text-light">
+          <h5>Mohit Chauhan Live</h5>
+          <p>Clicked by Rohit Arora at BITS, Pilani</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="DSC_3261.JPG" class="d-block" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block text-light">
+          <h5>Amit Trivedi Live</h5>
+          <p>Clicked by Marketing Team at Thapar University, Patiala</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

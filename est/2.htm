@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    let arr = [32,12,23,42];
+    document.write(arr);
+    document.write("<br>");
+    document.write(arr[0]);
+    document.write("<br>");
+    let heroes = ["ironman", "thor","hulk", "shaktiman", "spiderman", "antman"];
+    for(let i = 0; i<heroes.length;i++){
+        document.write(heroes[i]);
+        document.write("\t");
+        document.write("<br>");
+        
+    }
+    document.write(heroes.length);
+    document.write("<br>");
+    document.write(heroes.slice(0,3));
+
+    const num = [3, 4, 7, 9, 10];
+    document.write("Before Splice");
+    document.write("<br>");
+    document.write(num);
+    document.write("<br>");
+    document.write("After Splice");
+    document.write("<br>");
+    num.splice(1, 2, 99, 99, 99);
+    document.write(num);
+
+    </script>
+
+  </body>
+</html>

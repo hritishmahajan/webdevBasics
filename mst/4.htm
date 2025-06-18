@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <style>
+        /* Style for the video background */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Send video to the back */
+        }
+
+        /* Style for page content */
+        .content {
+            position: relative;
+            z-index: 1; /* Place content above video */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Video element for background -->
+<video autoplay muted loop>
+    <source src="./ocean.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<!-- Page content -->
+<div class="content">
+    <h1>Welcome to My Web Page</h1>
+    <p>This page has a full-screen background video!</p>
+</div>
+
+</body>
+</html>

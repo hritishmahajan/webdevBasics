@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submenu Navigation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+      background-color: darkred;
+      overflow: hidden;
+    }
+
+    ul li {
+      float: left;
+      position: relative;
+    }
+
+    ul li a {
+      display: block;
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+
+    ul li:hover {
+      background-color: black;
+    }
+
+    ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: gray;
+      z-index: 1000;
+    }
+
+    ul li:hover ul {
+      display: block;
+    }
+
+    ul li ul li {
+      float: none;
+      width: 180px;
+    }
+
+    ul li ul li a {
+      padding: 12px 20px;
+    }
+
+    ul li ul li:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#">Link 1</a></li>
+  <li>
+    <a href="#">Link 2</a>
+    <ul>
+      <li><a href="#">Sub Link 1</a></li>
+      <li><a href="#">Sub Link 2</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Link 3</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+
+
+
+    <style type="text/css">
+        #container-form {
+            width: 250px;
+            height: 350px;
+            background: linear-gradient(45deg, blueviolet, deeppink);
+            color: white;
+            margin: 50px auto;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        h2 {
+            text-align: center;
+
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            width: 230px;
+        }
+
+        input[type="radio"] {
+            margin: 5px;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(45deg, blueviolet, deeppink);
+            color: white;
+            width: 230px;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: 1px solid white;
+            box-shadow: 5px 5px 5px 1px blueviolet;
+
+        }
+
+        .fa {
+            font-size: 50px;
+            border: 10px solid deeppink;
+            border-radius: 50%;
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            margin-top: -25px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div id="container-form" class="animated swing">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+
+        <h2> Register Here</h2>
+        <form name="myform" method="get" onsubmit="return validForm();">
+            <div>
+                <label for="fname">First Name</label>
+                <br>
+                <input type="text" name="fname" id="fname">
+                <br>
+                <div id="name_error" style="color:aqua;"> </div>
+            </div>
+
+
+            <div>
+                <label for="passwd">Password</label>
+                <br>
+                <input type="Password" name="passwd" id="password">
+                <br>
+                <div id="password_error" style="color:aqua;"> </div>
+            </div>
+
+            <div>
+                <label>Enter the favourite color</label>
+
+                <br>
+                <input type="radio" name="color" value="RED" id="red">RED
+                <input type="radio" name="color" value="BLUE" id="blue">BLUE
+                <input type="radio" name="color" value="GREEN" id="green">GREEN
+                <div id="radio_error" style="color:aqua;"> </div>
+            </div>
+
+
+            <input type="submit" value="Submit">
+            <br>
+
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validForm() {
+
+            let name = document.getElementById("fname").value;
+            let password = document.getElementById("password").value;
+
+            let color = document.myform.color;
+            /*let name_error = document.getElementById("name_error");*/
+
+
+
+            let user_name_pattern = /^[A-Za-z]+$/;
+
+            if (name == "" || password == "" || color[0].checked == false && color[1].checked == false && color[2].checked == false) {
+
+
+                document.getElementById("name_error").innerHTML = "Name is required";
+                document.getElementById("password_error").innerHTML = "Password is required";
+                document.getElementById("radio_error").innerHTML = "Color is required";
+                return false;
+
+            }
+            if (name.length < 4) {
+                document.getElementById("name_error").innerHTML = "Name length should not less than 4 characters";
+
+                return false;
+
+            }
+
+            if (!user_name_pattern.test(name)) {
+                document.getElementById("name_error").innerHTML = "Numbers  are not  allowed";
+                return false;
+
+            }
+            /*if(!name.match(user_name_pattern))
+              }
+           {
+               document.getElementById("name_error").innerHTML="Only Alphabets are  allowed";
+              return false;
+           }*/
+
+            if (password.length < 4) {
+                document.getElementById("password_error").innerHTML = "Password length should not less than 4 characters";
+                return false;
+            }
+
+            return true;
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

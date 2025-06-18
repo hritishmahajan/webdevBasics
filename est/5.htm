@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus and Blur Example</title>
+</head>
+
+<body>
+    <label> Enter the Name</label>
+    <input type="text" onfocus="msg_txt(this);" onblur="msg_txt_off(this);">
+
+    <input type="button" value="Place Mouse Over Me" onmouseover="msg_on();" onmouseout="msg_off();">
+    <script>
+        function msg() {
+            window.alert("Welcome to the Event Class");
+        }
+
+        function msg_on() {
+            alert("Mouse is on the Button");
+        }
+        function msg_off() {
+            alert("Mouse is NOT on the Button");
+        }
+        function msg_txt(txt) {
+            txt.style.background = "cyan";
+        }
+
+        function msg_txt_off(txt) {
+            txt.style.background = "white";
+        }
+    </script>
+</body>
+
+</html>

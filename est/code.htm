@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = (num) => {
+            let a = num % 10;
+            let b = parseInt(num / 100);
+            return a + b;
+        }
+        let y = parseInt(prompt("Enter 3 dig num: "));
+        let result = x(y);
+        console.log(result);
+    </script>
+</body>
+
+</html>

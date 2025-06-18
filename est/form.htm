@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+<style>
+	body
+	{
+		background-color: yellow
+	}
+ form
+ {
+ 	border:10px solid orange;
+ 	height:500px;
+ 	width:450px;
+ 	padding: 10px;
+
+ }
+h2
+{
+	text-align: center;
+	font-family:Cambria;
+}
+label
+{
+	font-weight:bold;
+	font-size: 20px;
+	padding:5px;
+}
+input[type=text],[type=email]
+{
+  width:80%;
+  height:25px;
+  border:3px solid red;
+  border-radius: 10px;
+  background-color: khaki;
+  font-size:18px;
+  color:darkblue;
+}
+
+select
+{
+
+width:80%;
+  height:35px;
+  border:3px solid red;
+border-radius: 10px;
+background-color: khaki;
+  font-size:18px;
+}
+p
+{
+	font-weight: bold;
+	font-size:18px;
+}
+input[type=submit]
+{
+	width:150px;
+	height:30px;
+	font-weight: bold;
+	font-size:20px;
+	border:3px solid red;
+background-color: khaki;
+}
+</style>
+</head>
+<body>
+<form name="myform" method="post" onsubmit="return validForm()">
+<h2> Contact Form</h2>
+<label for="name">Name</label>
+<input type="text" id="name" name="name" >
+<br>
+<p>Enter the Gender</p>
+<input type="radio" name="gender"  id="option-1" value="Male">
+<label for="option-1">Male</label>
+<input type="radio" name="gender" id="option-2" value="Female">
+<label for = "option-2">Female</label>
+
+<br>
+<br>
+<input type="submit"  value = "Submit">
+</form>	
+<script type="text/javascript">
+	
+	function validForm()
+	{
+		
+	let user_name = document.myform.name.value;
+	
+	let gender_ = document.myform.gender;
+    
+
+	let user_name_pattern = /^[A-Za-z .]+$/;//
+	/* +$ 
+	+means one or more occurenes of all the characters It matches one or more occurences of the pattern left to it */
+	
+	
+	if(user_name=="")
+	{
+		alert("Name cannot be left blank");
+		return false;
+	}
+   else if(user_name.length<=4)
+   	{
+   		alert("Name must be greater than 4 characters");
+   		return false;
+   	}
+   else if(!user_name.match(user_name_pattern))
+   {
+   	alert("Numbers not allowed");
+  	return false;
+   }
+  	
+   
+   
+   else if((gender_[0].checked==false)&&(gender_[1].checked==false))
+{
+   	alert("Please enter the gender");
+   	return false; 
+   }
+
+
+
+  	return true;
+
+  
+
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>

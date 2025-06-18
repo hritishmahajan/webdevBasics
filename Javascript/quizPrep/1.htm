@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2> Register Here</h2>
+<form name="myform" method="get" onSubmit="return valid_Form();">
+
+
+<div>	
+<label for="fname">First Name</label>
+<br>
+<input type="text" name="fname" id="fname">
+<br>
+
+<div id="name_error" style="color:aqua";></div>
+
+
+</div>
+
+
+<div>
+<label for="passwd">Password</label>
+<br>
+<input type="Password" name="passwd" id="password">
+<br>
+<div id="passwd_error" style="color:aqua;"></div>
+</div>
+<label>Enter the favourite color</label>
+
+<br>
+<input type="radio" name="color" value="RED" id="red">RED
+<input type="radio" name="color" value="BLUE" id="blue">BLUE
+<input type="radio" name="color" value="GREEN" id="green">GREEN
+<div id="radio_error" style="color:aqua;"></div>
+</div>
+
+
+<input type="submit" value="Submit">
+<br>
+
+</form>
+	<script type="text/javascript">
+		 function valid_Form()
+		 {
+            	let name = document.myform.fname.value; 
+            	let passwd= document.myform.passwd.value;
+            	let color = document.myform.color.value;
+            	if(name==""||passwd==""||color[0].checked==false&&color[1].checked==false&&color[2].checked==false)
+            	{
+            		document.getElementById("name_error").innerHTML="Name is required";
+            		document.getElementById("passwd_error").innerHTML="Password is required";
+            		document.getElementById("radio_error").innerHTML="Radio Button must be  selected";
+
+            		return false;
+            	}	
+		  return true;
+		 }
+
+
+
+
+	</script>
+</body>
+</html>

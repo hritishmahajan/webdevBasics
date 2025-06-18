@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <center>
+    <div>
+        <form>
+            <h1> Sign up for the form below!</h1>
+            <form>
+                <label for="username">Name: </label>
+                <input type="text" name ="Name" id="username" placeholder="Enter your name here">
+                <br>        
+                <br>        
+                <label for="password">Password: </label>
+                <input type="password" name="Password" id="password" placeholder="Enter your password here"> 
+                <hr>
+            <!-- Radio -->
+                <h4>Select your favourite language</h4>
+                <input type="radio" name="fav_lang" id="html" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" name="fav_lang" id="css" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" name="fav_lang" id="javascript" value="javascript">
+                <label for="javascript">Javascript</label><br>
+                <input type="radio" name="fav_lang" id="c++" value="C++">
+                <label for="c++">C++</label>
+            <!-- Checkbox -->
+                <h4>Mark your necessities below</h4>
+                <input type="checkbox" name="necessities" id="love" value="Bike">
+                <label for="love">Love</label><br>
+                <input type="checkbox" name="necessities" id="power" value="Power">
+                <label for="power">Power</label><br>
+                <input type="checkbox" name="necessities" id="money" value="Money">
+                <label for="money">Money</label><br>
+                <input type="checkbox" name="necessities" id="friends" value="Friends">
+                <label for="friends">Friends</label><br>
+                
+            <!-- Dropdown List -->
+            <label for="cars"><h4>Choose a car:</h4></label>
+            <select id="cars" name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+            <hr>
+            <br>
+            <input type="button" value ="SUBMIT">
+            </form>
+    </div>
+
+</center>
+</body>
+</html>
